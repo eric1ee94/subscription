@@ -1,188 +1,17 @@
-port: 7890
+mixed-port: 7890
 socks-port: 7891
 allow-lan: true
-mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 experimental:
   ignore-resolve-fail: true
-Proxy:
-Proxy Group:
-  - name: 🔰 节点选择
-    type: select
-    proxies:
-      - ♻️ 自动选择
-      - 🇭🇰 香港节点
-      - 🇨🇳 台湾节点
-      - 🇸🇬 狮城节点
-      - 🇯🇵 日本节点
-      - 🇺🇲 美国节点
-      - 🚀 手动切换
-      - DIRECT
-  - name: 🚀 手动切换
-    type: select
-    proxies:
-  - name: ♻️ 自动选择
-    type: url-test
-    url: http://www.gstatic.com/generate_204
-    interval: 300
-    proxies:
-  - name: 📲 电报消息
-    type: select
-    proxies:
-      - 🔰 节点选择
-      - ♻️ 自动选择
-      - 🇸🇬 狮城节点
-      - 🇭🇰 香港节点
-      - 🇨🇳 台湾节点
-      - 🇯🇵 日本节点
-      - 🇺🇲 美国节点
-      - 🚀 手动切换
-      - DIRECT
-  - name: 📹 油管视频
-    type: select
-    proxies:
-      - 🔰 节点选择
-      - ♻️ 自动选择
-      - 🇸🇬 狮城节点
-      - 🇭🇰 香港节点
-      - 🇨🇳 台湾节点
-      - 🇯🇵 日本节点
-      - 🇺🇲 美国节点
-      - 🚀 手动切换
-      - DIRECT
-  - name: 🎥 奈飞视频
-    type: select
-    proxies:
-      - 🎥 奈飞节点
-      - 🔰 节点选择
-      - ♻️ 自动选择
-      - 🇸🇬 狮城节点
-      - 🇭🇰 香港节点
-      - 🇨🇳 台湾节点
-      - 🇯🇵 日本节点
-      - 🇺🇲 美国节点
-      - 🚀 手动切换
-      - DIRECT
-  - name: 📺 巴哈姆特
-    type: select
-    proxies:
-      - 🇨🇳 台湾节点
-      - 🔰 节点选择
-      - 🚀 手动切换
-      - DIRECT
-  - name: 🌍 国外媒体
-    type: select
-    proxies:
-      - 🔰 节点选择
-      - ♻️ 自动选择
-      - 🇭🇰 香港节点
-      - 🇨🇳 台湾节点
-      - 🇸🇬 狮城节点
-      - 🇯🇵 日本节点
-      - 🇺🇲 美国节点
-      - 🚀 手动切换
-      - DIRECT
-  - name: 🌏 国内媒体
-    type: select
-    proxies:
-      - DIRECT
-      - 🇭🇰 香港节点
-      - 🇨🇳 台湾节点
-      - 🇸🇬 狮城节点
-      - 🇯🇵 日本节点
-      - 🚀 手动切换
-  - name: Ⓜ️ 微软云盘
-    type: select
-    proxies:
-      - DIRECT
-      - 🔰 节点选择
-      - 🇺🇲 美国节点
-      - 🇭🇰 香港节点
-      - 🇨🇳 台湾节点
-      - 🇸🇬 狮城节点
-      - 🇯🇵 日本节点
-      - 🚀 手动切换
-  - name: 🍎 苹果服务
-    type: select
-    proxies:
-      - DIRECT
-      - 🔰 节点选择
-      - 🇺🇲 美国节点
-      - 🇭🇰 香港节点
-      - 🇨🇳 台湾节点
-      - 🇸🇬 狮城节点
-      - 🇯🇵 日本节点
-      - 🚀 手动切换
-  - name: 🎯 全球直连
-    type: select
-    proxies:
-      - DIRECT
-      - 🔰 节点选择
-      - ♻️ 自动选择
-  - name: 🛑 广告拦截
-    type: select
-    proxies:
-      - REJECT
-      - DIRECT
-  - name: 🍃 应用净化
-    type: select
-    proxies:
-      - REJECT
-      - DIRECT
-  - name: 🆎 AdBlock
-    type: select
-    proxies:
-      - REJECT
-      - DIRECT
-  - name: 🐟 漏网之鱼
-    type: select
-    proxies:
-      - 🔰 节点选择
-      - ♻️ 自动选择
-      - DIRECT
-      - 🇭🇰 香港节点
-      - 🇨🇳 台湾节点
-      - 🇸🇬 狮城节点
-      - 🇯🇵 日本节点
-      - 🇺🇲 美国节点
-      - 🚀 手动切换
-  - name: 🇭🇰 香港节点
-    type: fallback
-    url: http://www.gstatic.com/generate_204
-    interval: 300
-    proxies:
-  - name: 🇨🇳 台湾节点
-    type: url-test
-    url: http://www.gstatic.com/generate_204
-    interval: 300
-    proxies:
-      - DIRECT
-  - name: 🇸🇬 狮城节点
-    type: url-test
-    url: http://www.gstatic.com/generate_204
-    interval: 300
-    proxies:
-  - name: 🇯🇵 日本节点
-    type: url-test
-    url: http://www.gstatic.com/generate_204
-    interval: 300
-    proxies:
-  - name: 🇺🇲 美国节点
-    type: url-test
-    url: http://www.gstatic.com/generate_204
-    interval: 300
-    proxies:
-  - name: 🎥 奈飞节点
-    type: select
-    proxies:
-      - DIRECT
 cfw-latency-timeout: 3000
 cfw-latency-url: http://www.gstatic.com/generate_204
 cfw-conn-break-strategy:
   proxy: none
   profile: true
   mode: false
+cfw-proxies-order: default
 cfw-bypass-bak:
   - qq.com
   - music.163.com
@@ -443,13 +272,20 @@ cfw-bypass:
   - "*.firebaseio.com"
   - "*.hockeyapp.net"
   - "*.smartmailcloud.com"
+  - cdn.mileweb.cs.steampowered.com.8686c.com
+  - dl.steam.ksyna.com
+  - st.dl.bscstorage.net
+  - st.dl.eccdnx.com
+  - st.dl.pinyuncloud.com
+  - "*.csgo.wmsj.cn"
+  - "*.dota2.wmsj.cn"
   - "*.steam-chat.com"
-  - "*.steamgames.com"
-  - "*.steamusercontent.com"
-  - "*.steamcontent.com"
-  - "*.steamstatic.com"
   - "*.steamcdn-a.akamaihd.net"
+  - "*.steamcontent.com"
+  - "*.steamgames.com"
   - "*.steamstat.us"
+  - "*.steamstatic.com"
+  - "*.steamusercontent.com"
   - "*.foxmail.com"
   - "*.gtimg.com"
   - "*.idqqimg.com"
@@ -485,6 +321,9 @@ cfw-bypass:
   - "*.xunlei.com"
   - "*.got001.com"
   - "*.jstucdn.com"
+  - "*.rrys.tv"
+  - "*.rrys2020.com"
+  - "*.yyets.com"
   - "*.zimuzu.io"
   - "*.zimuzu.tv"
   - "*.zmz001.com"
@@ -539,6 +378,8 @@ cfw-bypass:
   - "*.jsdelivr.net"
   - "*.staticfile.org"
   - "*.upaiyun.com"
+  - "*.10010.com"
+  - "*.115.com"
   - "*.12306.com"
   - "*.17173.com"
   - "*.178.com"
@@ -615,6 +456,7 @@ cfw-bypass:
   - "*.ganjistatic1.com"
   - "*.geetest.com"
   - "*.geilicdn.com"
+  - "*.ghpym.com"
   - "*.godic.net"
   - "*.gravatar.com"
   - "*.guazi.com"
@@ -667,6 +509,7 @@ cfw-bypass:
   - "*.meituan.com"
   - "*.meituan.net"
   - "*.meizu.com"
+  - "*.migucloud.com"
   - "*.miguvideo.com"
   - "*.mobike.com"
   - "*.mogu.com"
@@ -755,6 +598,7 @@ cfw-bypass:
   - "*.xiaohongshu.com"
   - "*.xiaojukeji.com"
   - "*.xinhuanet.com"
+  - "*.xip.io"
   - "*.xitek.com"
   - "*.xiumi.us"
   - "*.xslb.net"
@@ -799,6 +643,177 @@ cfw-bypass:
   - 172.31.*
   - 192.168.*
   - <local>
+Proxy:
+Proxy Group:
+  - name: 🔰 节点选择
+    type: select
+    proxies:
+      - ♻️ 自动选择
+      - 🇭🇰 香港节点
+      - 🇨🇳 台湾节点
+      - 🇸🇬 狮城节点
+      - 🇯🇵 日本节点
+      - 🇺🇲 美国节点
+      - 🚀 手动切换
+      - DIRECT
+  - name: 🚀 手动切换
+    type: select
+    proxies:
+  - name: ♻️ 自动选择
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    proxies:
+  - name: 📲 电报消息
+    type: select
+    proxies:
+      - 🔰 节点选择
+      - ♻️ 自动选择
+      - 🇸🇬 狮城节点
+      - 🇭🇰 香港节点
+      - 🇨🇳 台湾节点
+      - 🇯🇵 日本节点
+      - 🇺🇲 美国节点
+      - 🚀 手动切换
+      - DIRECT
+  - name: 📹 油管视频
+    type: select
+    proxies:
+      - 🔰 节点选择
+      - ♻️ 自动选择
+      - 🇸🇬 狮城节点
+      - 🇭🇰 香港节点
+      - 🇨🇳 台湾节点
+      - 🇯🇵 日本节点
+      - 🇺🇲 美国节点
+      - 🚀 手动切换
+      - DIRECT
+  - name: 🎥 奈飞视频
+    type: select
+    proxies:
+      - 🎥 奈飞节点
+      - 🔰 节点选择
+      - ♻️ 自动选择
+      - 🇸🇬 狮城节点
+      - 🇭🇰 香港节点
+      - 🇨🇳 台湾节点
+      - 🇯🇵 日本节点
+      - 🇺🇲 美国节点
+      - 🚀 手动切换
+      - DIRECT
+  - name: 📺 巴哈姆特
+    type: select
+    proxies:
+      - 🇨🇳 台湾节点
+      - 🔰 节点选择
+      - 🚀 手动切换
+      - DIRECT
+  - name: 🌍 国外媒体
+    type: select
+    proxies:
+      - 🔰 节点选择
+      - ♻️ 自动选择
+      - 🇭🇰 香港节点
+      - 🇨🇳 台湾节点
+      - 🇸🇬 狮城节点
+      - 🇯🇵 日本节点
+      - 🇺🇲 美国节点
+      - 🚀 手动切换
+      - DIRECT
+  - name: 🌏 国内媒体
+    type: select
+    proxies:
+      - DIRECT
+      - 🇭🇰 香港节点
+      - 🇨🇳 台湾节点
+      - 🇸🇬 狮城节点
+      - 🇯🇵 日本节点
+      - 🚀 手动切换
+  - name: Ⓜ️ 微软云盘
+    type: select
+    proxies:
+      - DIRECT
+      - 🔰 节点选择
+      - 🇺🇲 美国节点
+      - 🇭🇰 香港节点
+      - 🇨🇳 台湾节点
+      - 🇸🇬 狮城节点
+      - 🇯🇵 日本节点
+      - 🚀 手动切换
+  - name: 🍎 苹果服务
+    type: select
+    proxies:
+      - DIRECT
+      - 🔰 节点选择
+      - 🇺🇲 美国节点
+      - 🇭🇰 香港节点
+      - 🇨🇳 台湾节点
+      - 🇸🇬 狮城节点
+      - 🇯🇵 日本节点
+      - 🚀 手动切换
+  - name: 🎯 全球直连
+    type: select
+    proxies:
+      - DIRECT
+      - 🔰 节点选择
+      - ♻️ 自动选择
+  - name: 🛑 广告拦截
+    type: select
+    proxies:
+      - REJECT
+      - DIRECT
+  - name: 🍃 应用净化
+    type: select
+    proxies:
+      - REJECT
+      - DIRECT
+  - name: 🆎 AdBlock
+    type: select
+    proxies:
+      - REJECT
+      - DIRECT
+  - name: 🐟 漏网之鱼
+    type: select
+    proxies:
+      - 🔰 节点选择
+      - ♻️ 自动选择
+      - DIRECT
+      - 🇭🇰 香港节点
+      - 🇨🇳 台湾节点
+      - 🇸🇬 狮城节点
+      - 🇯🇵 日本节点
+      - 🇺🇲 美国节点
+      - 🚀 手动切换
+  - name: 🇭🇰 香港节点
+    type: fallback
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    proxies:
+  - name: 🇨🇳 台湾节点
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    proxies:
+      - DIRECT
+  - name: 🇸🇬 狮城节点
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    proxies:
+  - name: 🇯🇵 日本节点
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    proxies:
+  - name: 🇺🇲 美国节点
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    proxies:
+  - name: 🎥 奈飞节点
+    type: select
+    proxies:
+      - DIRECT
 Rule:
  - DOMAIN-SUFFIX,acl4ssr,🎯 全球直连
  - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
